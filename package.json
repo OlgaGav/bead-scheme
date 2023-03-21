@@ -1,0 +1,26 @@
+{
+  "name": "bead-scheme",
+  "version": "1.0.0",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "scripts": {
+    "start": "node server/server.js --ignore client",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
